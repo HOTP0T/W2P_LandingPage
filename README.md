@@ -233,8 +233,7 @@ Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
 
 Pour toute question ou support :
 
-- Email : [votre-email]
-- GitHub Issues : [url-du-repo]/issues
+- Discord: @HOTP0T
 
 ---
 

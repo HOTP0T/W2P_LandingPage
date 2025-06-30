@@ -1,4 +1,4 @@
-# W2P Landing Page 🚏
+# Willing to Pay Landing Page 🚏
 
 Une landing page moderne et captivante pour W2P (Votre prix, votre séjour) avec des animations GSAP avancées.
 

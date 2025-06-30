@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W2P - Votre prix, votre séjour</title>
+    <meta
+      name="description"
+      content="Une nouvelle manière de réserver vos hôtels. Proposez votre propre prix, laissez les hôtels vous répondre, réservez en direct."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">W2P</div>
+        <div class="nav-links">
+          <a href="#comment-ca-marche">Comment ça marche</a>
+          <a href="#hoteliers">Hôteliers</a>
+          <a href="#contact" class="cta-secondary">Je veux tester</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Votre prix,</span>
+            <span class="title-line">votre séjour.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Une nouvelle manière de réserver vos hôtels.
+          </p>
+          <p class="hero-description">
+            Proposez votre propre prix, laissez les hôtels vous répondre,
+            réservez en direct.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="30">0</span>
+              <span class="stat-label">Économies moyennes</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="24">0</span>
+              <span class="stat-label">Réponse garantie</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="0">0</span>
+              <span class="stat-label">Frais cachés</span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <form class="email-form" id="hero-form">
+              <input type="email" placeholder="Votre email" required />
+              <button type="submit" class="cta-primary">Je veux tester</button>
+            </form>
+          </div>
+
+          <div class="hero-secondary">
+            <a href="#hoteliers" class="link-secondary"
+              >Je veux proposer mon hôtel</a
+            >
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="floating-card card-1">
+            <div class="card-content">
+              <span class="price">€89</span>
+              <span class="hotel">Hôtel Luxe</span>
+              <span class="card-badge">Accepté</span>
+            </div>
+          </div>
+          <div class="floating-card card-2">
+            <div class="card-content">
+              <span class="price">€120</span>
+              <span class="hotel">Boutique Hotel</span>
+              <span class="card-badge">Négocié</span>
+            </div>
+          </div>
+          <div class="floating-card card-3">
+            <div class="card-content">
+              <span class="price">€75</span>
+              <span class="hotel">Design Hotel</span>
+              <span class="card-badge">Direct</span>
+            </div>
+          </div>
+
+          <!-- Particules flottantes -->
+          <div class="particle particle-1"></div>
+          <div class="particle particle-2"></div>
+          <div class="particle particle-3"></div>
+          <div class="particle particle-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment ça marche -->
+    <section class="how-it-works" id="comment-ca-marche">
+      <div class="container">
+        <h2 class="section-title">Comment ça marche</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle
+                  cx="30"
+                  cy="30"
+                  r="25"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M20 30 L27 37 L40 23"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>1. Vous proposez le prix</h3>
+            <p>Que vous êtes prêt·e à payer pour votre séjour</p>
+          </div>
+
+          <div class="step">
+            <div class="step-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle
+                  cx="30"
+                  cy="30"
+                  r="25"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M20 25 L30 35 L40 25"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>2. L'hôtel vous répond</h3>
+            <p>Accepte, négocie ou refuse votre proposition</p>
+          </div>
+
+          <div class="step">
+            <div class="step-icon">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <circle
+                  cx="30"
+                  cy="30"
+                  r="25"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M25 30 L30 35 L35 30"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>3. Vous réservez</h3>
+            <p>Au prix que vous avez choisi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi s'inscrire -->
+    <section class="why-join">
+      <div class="container">
+        <h2 class="section-title">Pourquoi s'inscrire maintenant ?</h2>
+        <div class="benefits-container">
+          <div class="benefit">
+            <div class="benefit-icon">🎯</div>
+            <h3>Accès exclusif</h3>
+            <p>À la version privée</p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">💎</div>
+            <h3>Offres secrètes</h3>
+            <p>-10% sur la première nuitée</p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">🔧</div>
+            <h3>Influence le produit</h3>
+            <p>Sur la construction du produit</p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">🎁</div>
+            <h3>Tirages au sort</h3>
+            <p>Une nuit d'hôtel gratuite</p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">👥</div>
+            <h3>Communauté</h3>
+            <p>De voyageurs malins</p>
+          </div>
+        </div>
+
+        <div class="join-cta">
+          <form class="email-form" id="join-form">
+            <input type="email" placeholder="Votre email" required />
+            <button type="submit" class="cta-primary">
+              Je veux en faire partie
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valeurs de marque -->
+    <section class="brand-values">
+      <div class="container">
+        <div class="values-content">
+          <h2 class="values-title">
+            Ce n'est pas à un algorithme de décider ce que vaut votre séjour.
+          </h2>
+
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">🤝</div>
+              <h3 class="value-title">Proximité</h3>
+              <p class="value-description">
+                Une relation directe entre voyageurs et hôteliers. Plus
+                d'intermédiaires, plus de transparence. Vous négociez
+                directement avec ceux qui décident.
+              </p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon">🔍</div>
+              <h3 class="value-title">Transparence</h3>
+              <p class="value-description">
+                Vous voyez exactement ce que vous payez. Pas de frais cachés,
+                pas de commissions surprises. Le prix que vous proposez est le
+                prix que vous payez.
+              </p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon">🕊️</div>
+              <h3 class="value-title">Liberté</h3>
+              <p class="value-description">
+                Vous décidez de votre budget, vous choisissez votre prix.
+                Libérez-vous des tarifs imposés et reprenez le contrôle de vos
+                dépenses.
+              </p>
+            </div>
+          </div>
+
+          <div class="values-list">
+            <div class="value">Proximité</div>
+            <div class="value">Transparence</div>
+            <div class="value">Liberté</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pour hôteliers -->
+    <section class="for-hotels" id="hoteliers">
+      <div class="container">
+        <div class="hotels-content">
+          <h2 class="section-title">
+            Un canal de vente flexible et sans risque.
+          </h2>
+          <div class="hotels-benefits">
+            <div class="hotel-benefit">
+              <h3>🎯 Ciblage intelligent</h3>
+              <p>Des clients qui connaissent leur budget</p>
+            </div>
+            <div class="hotel-benefit">
+              <h3>💳 Réservation directe</h3>
+              <p>Sans intermédiaire, sans commission cachée</p>
+            </div>
+            <div class="hotel-benefit">
+              <h3>💰 0 abonnement</h3>
+              <p>100% à la performance</p>
+            </div>
+          </div>
+
+          <div class="hotels-cta">
+            <a href="#" class="cta-primary">Inscrire mon hôtel gratuitement</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parrainage -->
+    <section class="referral">
+      <div class="container">
+        <h2 class="section-title">
+          Plus vous partagez, plus vous avez de chances de gagner.
+        </h2>
+        <div class="referral-rules">
+          <div class="rule">
+            <span class="rule-number">1</span>
+            <p>1 ami inscrit = 1 chance de gagner une nuit gratuite</p>
+          </div>
+          <div class="rule">
+            <span class="rule-number">2</span>
+            <p>Récompenses : nuitées, accès anticipé, goodies</p>
+          </div>
+          <div class="rule">
+            <span class="rule-number">3</span>
+            <p>Lien de parrainage généré automatiquement</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Ils ont déjà testé W2P</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>
+                "J'ai économisé 45€ sur ma dernière nuit d'hôtel à Paris. Le
+                concept est génial !"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">👤</div>
+              <div class="author-info">
+                <h4>Marie L.</h4>
+                <span>Voyageuse business</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>
+                "Plus besoin de comparer des dizaines de sites. Je propose mon
+                prix et c'est tout !"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">👤</div>
+              <div class="author-info">
+                <h4>Thomas B.</h4>
+                <span>Digital nomad</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>
+                "Enfin une plateforme qui respecte mon budget. Je recommande à
+                100% !"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">👤</div>
+              <div class="author-info">
+                <h4>Sophie M.</h4>
+                <span>Étudiante</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="section-title">Questions fréquentes</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Comment fonctionne la négociation ?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Vous proposez le prix que vous êtes prêt à payer. L'hôtel peut
+                accepter, proposer un contre-offre, ou refuser. Vous gardez le
+                contrôle total de votre budget.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Y a-t-il des frais cachés ?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Aucun frais caché ! Le prix que vous proposez est le prix que
+                vous payez. Pas de commission, pas de frais de service
+                surprises.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Combien de temps pour une réponse ?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                La plupart des hôtels répondent sous 24h. Si vous n'avez pas de
+                réponse dans ce délai, vous pouvez proposer à d'autres hôtels.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Puis-je annuler ma réservation ?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Les conditions d'annulation dépendent de l'hôtel. Elles sont
+                clairement indiquées avant la confirmation de votre réservation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-pitch">
+            <h3>Votre prix. Votre séjour. Une nouvelle manière de voyager.</h3>
+            <p>
+              Rejoignez la révolution du voyage. Plus d'algorithme qui décide à
+              votre place, plus de prix imposés. Vous reprenez le contrôle de
+              votre budget et de vos choix.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <form class="email-form" id="footer-form">
+              <input type="email" placeholder="Votre email" required />
+              <button type="submit" class="cta-primary">Je m'inscris</button>
+            </form>
+          </div>
+
+          <div class="footer-links">
+            <a href="#">CGU</a>
+            <a href="#">Confidentialité</a>
+            <a href="#">Contact</a>
+            <a href="#">À propos</a>
+            <a href="#">Blog</a>
+          </div>
+
+          <div class="footer-bottom">
+            <p>
+              &copy; 2025 W2P. Tous droits réservés. | Une nouvelle manière de
+              voyager.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Exit Intent Popup -->
+    <div class="popup-overlay" id="exit-popup">
+      <div class="popup">
+        <button class="popup-close" id="popup-close">&times;</button>
+        <h3>Et si vous décidiez du prix de votre prochaine nuit d'hôtel ?</h3>
+        <form class="email-form" id="popup-form">
+          <input type="email" placeholder="Votre email" required />
+          <button type="submit" class="cta-primary">Je veux tester</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -233,7 +233,7 @@ Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
 
 Pour toute question ou support :
 
-- Discord: @HOTP0T
+- Discord: @hotp0t
 
 ---
 
